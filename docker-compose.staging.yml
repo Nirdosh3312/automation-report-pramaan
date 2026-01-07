@@ -40,7 +40,7 @@ services:
     container_name: mongo
     restart: always
     ports:
-      - "27017:27017"   # remove if you don't want host access
+      - "27019:27017"   # remove if you don't want host access
     volumes:
       - mongo-data:/data/db
     networks:
