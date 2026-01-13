@@ -426,10 +426,10 @@ async function getHTMLReports(test_id) {
     const buyerJSONReports = reports.map((item) => JSON.parse(item.report));
 
     /** fetch JSON reports from Seller Testing */
-    // const response = await axios.get(`${PRAMAAN_SELLER_TESTING_API}/get-json-reports/${test_id}`);
-    // const sellerJSONReports = response.data;
+    const response = await axios.get(`${PRAMAAN_SELLER_TESTING_API}/get-json-reports/${test_id}`);
+    const sellerJSONReports = response.data;
 
-    const jsonReports = buyerJSONReports ?? [];
+    const jsonReports = [...(buyerJSONReports ?? []), ...(sellerJSONReports ?? [])];
 
     if (jsonReports.length > 0) {
       const mergedReport = await merge(jsonReports);
