@@ -63,7 +63,7 @@ module.exports = async function (req, res) {
             'x-api-key': PW_LOGS_API_KEY
           }
         });
-      }, 60000);
+      }, 10000);
     }
 
     return res.status(200).json({
