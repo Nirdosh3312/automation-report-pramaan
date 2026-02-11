@@ -5,8 +5,8 @@
         "domain": "ONDC:RET",
         "version": "1.2.5",
         "flowType": "mandatory",
-        "name": "Flow 3B: Merchant Side Full Order Cancellation (RTO Flow)",
-        "description": "Merchant Side Full Order Cancellation (RTO Flow)",
+        "name": "Flow 3B: RTO And Part Cancellation Flow",
+        "description": "RTO And Part Cancellation Flow",
         "flow": [
             {
                 "test": "search",
@@ -23,6 +23,37 @@
             {
                 "test": "confirm",
                 "action": "confirm"
+            }
+        ]
+    },
+    {
+        "id": "RET_MRGD_2",
+        "type": "RETAIL_1_2_5",
+        "domain": "ONDC:RET",
+        "version": "1.2.5",
+        "flowType": "mandatory",
+        "name": "Flow 4A: Return Flow",
+        "description": "Return Flow",
+        "flow": [
+            {
+                "test": "search",
+                "action": "search"
+            },
+            {
+                "test": "select",
+                "action": "select"
+            },
+            {
+                "test": "init",
+                "action": "init"
+            },
+            {
+                "test": "confirm",
+                "action": "confirm"
+            },
+            {
+                "test": "update_buyer_return",
+                "action": "update"
             }
         ]
     }
