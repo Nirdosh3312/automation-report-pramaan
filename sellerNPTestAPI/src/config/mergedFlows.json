@@ -112,5 +112,32 @@
                 "action": "on_update"
             }
         ]
+    },
+    {
+        "id": "RET_MRGD_3_OOF_011",
+        "type": "RETAIL_1_2_5",
+        "domain": "ONDC:RET",
+        "version": "1.2.5",
+        "flowType": "additional",
+        "name": "Flow: Buyer instruction and delivery update flow",
+        "description": "Buyer instruction and delivery update flow",
+        "flow": [
+            {
+                "test": "on_search",
+                "action": "on_search"
+            },
+            {
+                "test": "on_select",
+                "action": "on_select"
+            },
+            {
+                "test": "on_init",
+                "action": "on_init"
+            },
+            {
+                "test": "on_confirm",
+                "action": "on_confirm"
+            }
+        ]
     }
 ]

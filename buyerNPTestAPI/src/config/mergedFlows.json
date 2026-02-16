@@ -5,7 +5,7 @@
         "domain": "ONDC:RET",
         "version": "1.2.5",
         "flowType": "mandatory",
-        "name": "Flow 3B: RTO And Part Cancellation Flow",
+        "name": "Flow: RTO And Part Cancellation Flow",
         "description": "RTO And Part Cancellation Flow",
         "flow": [
             {
@@ -32,7 +32,7 @@
         "domain": "ONDC:RET",
         "version": "1.2.5",
         "flowType": "mandatory",
-        "name": "Flow 4A: Return Flow",
+        "name": "Flow: Return Flow",
         "description": "Return Flow",
         "flow": [
             {
@@ -54,6 +54,33 @@
             {
                 "test": "update_buyer_return",
                 "action": "update"
+            }
+        ]
+    },
+    {
+        "id": "RET_MRGD_3_OOF_011",
+        "type": "RETAIL_1_2_5",
+        "domain": "ONDC:RET",
+        "version": "1.2.5",
+        "flowType": "additional",
+        "name": "Flow: Buyer instruction and delivery update flow",
+        "description": "Buyer instruction and delivery update flow",
+        "flow": [
+            {
+                "test": "search",
+                "action": "search"
+            },
+            {
+                "test": "select",
+                "action": "select"
+            },
+            {
+                "test": "init",
+                "action": "init"
+            },
+            {
+                "test": "confirm",
+                "action": "confirm"
             }
         ]
     }
