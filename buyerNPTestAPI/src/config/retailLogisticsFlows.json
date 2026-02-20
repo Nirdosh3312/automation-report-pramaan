@@ -1142,6 +1142,14 @@
       {
         "test": "confirm",
         "action": "confirm"
+      },
+      {
+        "test": "update_pickup",
+        "action": "update"
+      },
+      {
+        "test": "update_delivered",
+        "action": "update"
       }
     ],
     "enhFlows": [

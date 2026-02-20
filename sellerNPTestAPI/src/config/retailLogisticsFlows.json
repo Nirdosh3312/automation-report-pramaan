@@ -1935,6 +1935,10 @@
             {
                 "test": "on_confirm",
                 "action": "on_confirm"
+            },
+            {
+                "test": "on_status_packed",
+                "action": "on_status"
             }
         ],
         "enhFlows": [
