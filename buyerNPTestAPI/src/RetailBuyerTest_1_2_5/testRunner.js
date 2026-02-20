@@ -14,6 +14,7 @@ const SEARCH_TYPES = {
 
 const cancelIndex = {
     "cancel": 0,
+    "cancel_return": 0,
     "cancel_not_cancellable": 0,
     "cancel_forced": 1
 }
@@ -83,6 +84,7 @@ module.exports = function testRunnerRetail(givenTest, logs, domain, type = "") {
                     case "cancel":
                     case "cancel_not_cancellable":
                     case "cancel_forced":
+                    case "cancel_return":
                         if (particularLogs[cancelIndex[currentStep.test]]?.request)
                             return () => cancel(particularLogs[cancelIndex[currentStep.test]]?.request, logs, constants);
                         return () => cancel({}, logs, constants);
